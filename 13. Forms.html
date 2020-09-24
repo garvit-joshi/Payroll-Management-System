@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13. Forms</title>
+    <style>
+        #register-form {
+            width: 300px;
+            background-color: white;
+            padding: 24px;
+            margin: auto;
+        }
+        p {
+            margin: 0;
+            margin-bottom: 4px;
+            margin-top: 12px;
+        }
+        select {
+            margin-bottom: 20px;
+            width: 102%;
+        }
+        input,textarea {
+            width: 100%;
+        }
+        #terms {
+            width: 10%;
+            margin-top: 12px;
+            margin-bottom: 18px;
+        }
+        #male {
+            width: 10%;
+        }
+        #female {
+            width: 10%;
+        }
+        #other {
+            width: 10%;
+        }
+    </style>
+</head>
+<body style="background-color: lightblue;">
+    <h1 style="text-align: center;">Signup</h1>
+    <form id="register-form" method="GET">
+        <div>
+            <p>Full Name:</p>
+            <input type="text" name="full-name" placeholder="Full Name" autofocus required>
+        </div>
+        <div>
+            <p>Date of Birth:</p>
+            <input type="date" max="2002-01-01">
+        </div>
+        <div>
+            <p>Email:</p>
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div>
+            <p>Age:</p>
+            <input type="number" name="age" placeholder="Age" required min="18" max="60">
+        </div>
+        <div>
+            <p>Password:</p>
+            <input type="password" name="password" required maxlength="16">
+        </div>
+        <div>
+            <p>Confirm Password:</p>
+            <input type="password" name="confirm-password" required maxlength="16">
+        </div>
+        <div>
+            <p>Gender:</p>
+            <input type="radio" name="Gender" value="male" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="Gender" value="female" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="Gender" value="other" id="other">
+            <label for="other">Other</label>
+        </div>
+        <div>
+            <p>Security Question:</p>
+            <select name="security-question" multiple>
+                <option value="first-pet-name">What was your first pet name?</option>
+                <option value="born">Where were you born?</option>
+                <option value="nickname">What is your nickname?</option>
+            </select>
+        </div>
+        <div>
+            <textarea name="answer" rows="6" cols="30"></textarea>
+        </div>
+        <div>
+            <input type="checkbox" name="terms-conditions" value="accept" id="terms">
+            <label for="terms">I agree to accept terms and conditions.</label>
+        </div>
+        <div>
+            <label for="technologies">Favorite Language</label>
+            <input list="technologies" name="technologies">
+            <datalist id="technologies">
+                <option value="HTML">
+                <option value="CSS">
+                <option value="JAVASCRIPT">
+            </datalist>
+        </div>
+        <div>
+            <input type="file" name="image"> 
+        </div>
+        <div>
+            <input type="submit" value="Register" style="margin-top: 5px; margin-bottom: 5px;">
+            <input type="reset">
+        </div>
+    </form>
+</body>
+</html>
