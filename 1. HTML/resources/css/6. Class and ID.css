@@ -1,0 +1,15 @@
+.planet-images {
+    width: 250px;
+    height: 250px;
+}
+.planet-description {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+#Heading1 {
+    color: lime;
+}
+#Heading2 {
+    color: orange;
+}
