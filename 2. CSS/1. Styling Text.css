@@ -39,3 +39,33 @@ p {
     20 for left and right
     */
 }
+#links {
+    background-color: lightblue;
+    padding: 24px 48px;
+}
+.menu-item {
+    font-size: 24px;
+    margin-right: 24px;
+    text-decoration: none;
+}
+
+.menu-item:link {
+    color:blue;
+}
+
+.menu-item:visited{
+    color:green;
+}
+
+.menu-item:hover {
+    color: red;
+}
+
+.menu-item:active {
+    color: purple;
+}
+/*
+Rules:
+Hover must be defined after link and visited
+active must be defined after hover
+*/
