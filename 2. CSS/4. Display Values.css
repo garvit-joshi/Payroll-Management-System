@@ -1,0 +1,67 @@
+#About {
+    display: block;
+}
+
+#Hidden {
+    display: none;
+}
+
+#HBTS {
+    visibility: hidden;
+}
+
+#span-1 {
+    background-color: lightblue;
+    height: 100px;
+    width: 200px;
+}
+
+#span-2 {
+    background-color: lightcoral;
+    display: inline-block;
+    height: 100px;
+    width: 200px;
+    /*
+    Compared to display: inline, the major difference is that display: 
+    inline-block allows to set a width and height on the element.
+    */
+}
+
+main {
+    padding: 16px 10%;
+}
+
+body {
+    margin: 0;
+}
+
+aside {
+    width: 29%;
+    margin-right: 1%;
+    background-color: lightcoral;
+    height: 450px;
+    display: inline-block;
+}
+
+section {
+    width: 69%;
+    height: 450px;
+    background-color: lightgreen;
+    display: inline-block;
+}
+
+header {
+    background-color: lightblue;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    /*
+    topbar will stick to top
+    */
+}
+
+footer {
+    background-color: lightgrey;
+    height: 300px;
+
+}
