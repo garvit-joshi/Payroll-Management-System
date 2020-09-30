@@ -1,0 +1,52 @@
+/*
+Position Values:
+1. Static: Default
+2. Relative
+3. Absolute
+4. Fixed
+5. Sticky: Mix of Position Relative and Fixed
+*/
+#Birds {
+    background-color: lightcoral;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+#Deer {
+    background-color: lightcoral;
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    z-index: -50;
+    /*
+    z index does not work with static
+    */
+}
+
+#Tiger {
+    position: relative;
+    top: 800px;
+    right: initial;
+}
+
+#wrapper {
+    background-color: coral;
+    width: 500px;
+    height: 400px;
+    overflow: auto;
+}
+
+#Horse {
+    width: 900px;
+    height: inherit;
+}
+
+footer {
+    background-color: lightgrey;
+    height: 80px;
+    width: 1350px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
