@@ -29,16 +29,11 @@ body {
     color: white;
 }
 
-.img-Birds {
-    float: right;
-    padding: 5px;
-    border-radius: 15mm;
-}
-
-#Article-Wrapper {
-    padding: 5px;
-}
-
-article {
-    padding: 10px;
+p {
+    margin: 15px;
+    padding: 100px;
+    border: 5px solid  #4CAF50;
+    width: 400px;
+    height: 800px;
+    box-sizing: border-box;
 }
