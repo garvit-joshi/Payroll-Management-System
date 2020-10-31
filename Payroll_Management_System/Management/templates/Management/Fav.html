@@ -7,6 +7,8 @@
     <ul>
         {% for Fav in Favorites %}
             <li>{{ Fav }}</li>
+            {% empty %}
+            <p>No Such Favorites</p>
         {% endfor %}
     </ul>
     <a href="{% url 'Management:Add' %}">Add a New Task</a>

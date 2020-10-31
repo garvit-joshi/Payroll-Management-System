@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 import datetime
 from django import forms
+from django.urls import reverse
 
-Favorites = ["foo", "bar", "baz"]
+Favorites = []
 
 class NewTaskForm(forms.Form):
     Fav = forms.CharField(label="New Favorite")
@@ -31,7 +32,14 @@ def add(request):
     if request.method=="POST":
         form = NewTaskForm(request.POST)
         if form.is_valid():
-            form.cleaned_data["Fav"]
+            Fav=form.cleaned_data["Fav"]
+            Favorites.append(Fav)
+            return HttpResponseRedirect(reverse("Management:Add"))
+        else:
+            return render(request, "Management/Add.html", {
+                "form": form
+            })
+    
     return render(request, "Management/Add.html", {
         "form": NewTaskForm()
     })

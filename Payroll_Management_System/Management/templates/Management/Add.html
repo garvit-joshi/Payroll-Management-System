@@ -4,7 +4,7 @@
 
 {% block body %}
     <h1>Add Favorites</h1>
-    <form action="{% url 'Management:Fav' %}" method="POST">
+    <form action="{% url 'Management:Add' %}" method="POST">
         {% csrf_token %}
         {{ form }}
         <input type="submit">
