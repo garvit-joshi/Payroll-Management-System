@@ -1,0 +1,13 @@
+{% extends "Management/Layout.html" %}
+
+{% block title %} Favorites {% endblock title %}
+
+{% block body %}
+<h1>Favorites</h1>
+    <ul>
+        {% for Fav in Favorites %}
+            <li>{{ Fav }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'Management:Add' %}">Add a New Task</a>
+{% endblock %}
