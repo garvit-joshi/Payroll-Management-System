@@ -1,17 +1,51 @@
-{% load static %} 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+      <title>
         {% block title %}
         {{ page_title|default:"Untitled Page" }}
         {% endblock title %}
     </title>
-    <link href="{% static 'Management/styles.css' %}" rel="stylesheet">
-</head>
-<body>
-    {% block body %}
-    {% endblock %}
-</body>
+      <link href="{% static 'Management/styles.css' %}" rel="stylesheet">
+   </head>
+   <body>
+      <div id="root">
+         <div class="container">
+            <div class="sidebar user">
+               <div>
+                  <div class="avatar shine"><img src="https://res.cloudinary.com/garvitjoshi9/image/upload/v1594407409/Git-Hub/1_4_ebmyhb.jpg" class="profile" alt=""></div>
+                  <h1>Payroll Management System</h1>
+                  <p>A Reliable Management System made for the Elites.</p>
+               </div>
+               <div>
+                  <h3>Favorites:</h3>
+                  <div class="skills">
+                     {% for Fav in Favorites %}
+                     <span>{{ Fav }}</span>
+                     {% empty %}
+                     <p>No Such Favorites</p>
+                     {% endfor %}
+                  </div>
+               </div>
+               <div class="details">
+                  <h3>About Devloper:</h3>
+                  <div><i class="fab fa-github-alt"></i><a href="https://github.com/garvit-joshi" target="_blank" rel="noopener noreferrer" style="color: inherit;">@garvit-joshi</a></div>
+                  <div><i class="fas fa-building"></i>Lovely Professional University</div>
+                  <div><i class="fas fa-map-marker-alt"></i>Phagwara, Punjab</div>
+               </div>
+            </div>
+            <div class="main">
+               <h1>Features</h1>
+               <div class="repoContainer">
+                  {% block body %}
+                  {% endblock body %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>

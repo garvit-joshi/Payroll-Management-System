@@ -15,7 +15,7 @@ class NewTaskForm(forms.Form):
 def index(request):
     now = datetime.datetime.now()
     return render(request, "Management/index.html", {
-        "newyear": now.month == 10 and now.day == 3
+        "Favorites": Favorites
     })
 
 def Greet(request, name):
@@ -37,9 +37,11 @@ def add(request):
             return HttpResponseRedirect(reverse("Management:Add"))
         else:
             return render(request, "Management/Add.html", {
-                "form": form
+                "form": form,
+                "Favorites": Favorites
             })
     
     return render(request, "Management/Add.html", {
-        "form": NewTaskForm()
+        "form": NewTaskForm(),
+        "Favorites": Favorites
     })

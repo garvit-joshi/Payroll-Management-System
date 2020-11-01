@@ -2,11 +2,32 @@
 
 {% block title %} Hello World {% endblock title %}
 
+
+
 {% block body %}
-    <h1>Hello World!!</h1>
-    {% if newyear %}
-        <h1>Yes</h1>
-    {% else %}
-        <h1>No</h1>
-    {% endif %}
-{% endblock %}
+<a href="#" class="repoCard" target="_blank" rel="noopener noreferrer">
+   <div class="repoTitle">Login</div>
+   <p>Login for Admins</p>
+   <div><span>Login</span><span>Admin</span></div>
+</a>
+<a href="#" class="repoCard" target="_blank" rel="noopener noreferrer">
+    <div class="repoTitle">Signup for Employee</div>
+    <p>Employee Register Here!!</p>
+    <div><span>Login</span><span>Employee</span></div>
+</a>
+<a href="#" class="repoCard" target="_blank" rel="noopener noreferrer">
+    <div class="repoTitle">Login for Employee</div>
+    <p>Employee Login Here</p>
+    <div><span>Login</span><span>Employee</span></div>
+</a>
+<a href="#" class="repoCard" target="_blank" rel="noopener noreferrer">
+   <div class="repoTitle">Report a complaint</div>
+   <p>Bug Reports, Complaint Filing System</p>
+   <div><span>Form</span><span>Bugs</span></div>
+</a>
+<a href="{% url 'Management:Add' %}" class="repoCard" target="_blank" rel="noopener noreferrer">
+   <div class="repoTitle">Add A New Favorite</div>
+   <p>Adding a new favorite</p>
+   <div><span>Favorite</span><span>Add</span></div>
+</a>
+{% endblock body%}
