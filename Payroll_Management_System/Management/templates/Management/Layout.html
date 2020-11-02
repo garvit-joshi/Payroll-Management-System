@@ -4,6 +4,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="shortcut icon" type="image/ico" href="{% static 'Management/favicon.ico' %}"/>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
       <title>
         {% block title %}
@@ -17,7 +18,11 @@
          <div class="container">
             <div class="sidebar user">
                <div>
-                  <div class="avatar shine"><img src="https://res.cloudinary.com/garvitjoshi9/image/upload/v1594407409/Git-Hub/1_4_ebmyhb.jpg" class="profile" alt=""></div>
+                  <a href="{% url 'Management:Index' %}">
+                     <div class="avatar shine">
+                        <img src="https://res.cloudinary.com/garvitjoshi9/image/upload/v1594407409/Git-Hub/1_4_ebmyhb.jpg" class="profile" alt="">
+                     </div>
+                  </a>
                   <h1>Payroll Management System</h1>
                   <p>A Reliable Management System made for the Elites.</p>
                </div>

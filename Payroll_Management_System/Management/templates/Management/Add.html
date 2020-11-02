@@ -4,10 +4,12 @@
 
 {% block body %}
     <h1>Add Favorites</h1>
-    <form action="{% url 'Management:Add' %}" method="POST">
+    <form action="{% url 'Management:AddFav' %}" method="POST">
         {% csrf_token %}
         {{ form }}
         <input type="submit">
     </form>
-    <a href="{% url 'Management:Fav' %}">View Tasks</a>
+    <div class="container">
+        <a href="{% url 'Management:Fav' %}">View Tasks</a>
+    </div>
 {% endblock %}

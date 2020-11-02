@@ -1,0 +1,30 @@
+{% extends "Management/Layout.html" %}
+
+{% block title %} Home Page {% endblock title %}
+
+
+
+{% block body %}
+<h1>All Complaints</h1>
+    <table id="code">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Complaint Type</th>
+            <th>Complaint Subject</th>
+            <th>Complaint Message</th>
+        </tr>
+        {% for Comp in Complaint %}
+        <tr>
+            <td>{{Comp.0}}</td>
+            <td>{{Comp.1}}</td>
+            <td>{{Comp.2}}</td>
+            <td>{{Comp.3}}</td>
+            <td>{{Comp.4}}</td>
+        </tr>
+        {% empty %}
+            <td colspan="5">No Complaint</td>
+        {% endfor %}
+    </table>
+    <a href="{% url 'Management:AddComp' %}">Add a New Complaint</a>
+{% endblock body%}

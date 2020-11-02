@@ -1,0 +1,17 @@
+{% extends "Management/Layout.html" %}
+
+{% block title %} Home Page {% endblock title %}
+
+
+
+{% block body %}
+<h1>Add a new Complaint</h1>
+<form action="{% url 'Management:AddComp' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+</form>
+<div class="container">
+    <a href="{% url 'Management:complaint' %}">View all complaints</a>
+</div>
+{% endblock body%}

@@ -7,5 +7,7 @@ urlpatterns=[
     path("", views.index, name="Index"),
     path("Fav/", views.Fav, name="Fav"),
     path("<str:name>", views.Greet, name="Greet"),
-    path("add/", views.add, name="Add")
+    path("add/", views.addFav, name="AddFav"),
+    path("addcompl/", views.addComp, name="AddComp"),
+    path("complaints/", views.View_Complaint, name="complaint")
 ]
