@@ -6,7 +6,9 @@
 
 {% block body %}
 <h1>All Complaints</h1>
-    <table id="code">
+</div>
+<div class="repoContainer">
+    <table id="code" style="position: relative; margin-right: 30px; padding: 15px;border-spacing:30px;">
         <tr>
             <th>Name</th>
             <th>Email</th>
@@ -26,5 +28,7 @@
             <td colspan="5">No Complaint</td>
         {% endfor %}
     </table>
-    <a href="{% url 'Management:AddComp' %}">Add a New Complaint</a>
 {% endblock body%}
+{% block sec_body %}
+    <a href="{% url 'Management:AddComp' %}" style="position: relative;">Add a New Complaint</a>
+{% endblock sec_body %}
