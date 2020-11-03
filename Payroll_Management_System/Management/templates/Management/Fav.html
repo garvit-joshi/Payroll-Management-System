@@ -5,8 +5,8 @@
 {% block body %}
 <h1>Favorites</h1>
     <ul>
-        {% for Fav in Favorites %}
-            <li>{{ Fav }}</li>
+        {% for fav in favorites %}
+            <li>{{ fav }}</li>
             {% empty %}
             <p>No Such Favorites</p>
         {% endfor %}

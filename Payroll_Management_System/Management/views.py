@@ -23,7 +23,7 @@ class NewComplaintForm(forms.Form):
     sender = forms.EmailField(label="Your Email:", required="True")
     c_type = forms.CharField(label="Complaint Type:", required="True")
     subject = forms.CharField(label="Subject:", min_length=10, required="True")
-    message = forms.CharField(label="Message:",max_length=300, required="True")
+    message = forms.CharField(label="Message:", max_length=300, required="True")
 
 
 # Create your views here.
@@ -35,29 +35,29 @@ def index(request):
 
 def view_fav(request):
     return render(request, "Management/Fav.html", {
-        "Favorites": favorites
+        "favorites": favorites
     })
 
 def add_fav(request):
-    if request.method=="POST":
+    if request.method == "POST":
         form = NewFavForm(request.POST)
         if form.is_valid():
-            Fav=form.cleaned_data["new_favorite"]
-            favorites.append(Fav)
+            new_favorite = form.cleaned_data["new_favorite"]
+            favorites.append(new_favorite)
             return HttpResponseRedirect(reverse("Management:Add_Favourite"))
         else:
             return render(request, "Management/Add.html", {
                 "form": form,
-                "Favorites": favorites
+                "favorites": favorites
             })
     
     return render(request, "Management/Add.html", {
         "form": NewFavForm(),
-        "Favorites": favorites
+        "favorites": favorites
     })
 
 def add_complaint(request):
-    if request.method=="POST":
+    if request.method == "POST":
         form = NewComplaintForm(request.POST)
         if form.is_valid():
             name = form.cleaned_data["name"]
@@ -82,5 +82,5 @@ def add_complaint(request):
 
 def view_complaint(request):
     return render(request, "Management/complaint.html", {
-        "Complaint":zip(complaint_author,complaint_email,complaint_type,complaint_subject,complaint_message)
+        "Complaint": zip(complaint_author, complaint_email, complaint_type, complaint_subject, complaint_message)
     })
