@@ -1,17 +1,17 @@
-{% extends "Management/Layout.html" %}
+{% extends "Management/layout.html" %}
 
-{% block title %} Home Page {% endblock title %}
+{% block title %} New Complaint {% endblock title %}
 
 
 
 {% block body %}
 <h1>Add a new Complaint</h1>
-<form action="{% url 'Management:AddComp' %}" method="POST">
+<form action="{% url 'Management:Add_Complaint' %}" method="POST">
     {% csrf_token %}
     {{ form }}
     <input type="submit">
 </form>
 </div>
 <div class="repoContainer">
-    <a href="{% url 'Management:complaint' %}">View all complaints</a>
+    <a href="{% url 'Management:View_Complaint' %}">View all complaints</a>
 {% endblock body%}

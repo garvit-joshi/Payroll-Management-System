@@ -1,6 +1,6 @@
-{% extends "Management/Layout.html" %}
+{% extends "Management/layout.html" %}
 
-{% block title %} Home Page {% endblock title %}
+{% block title %} Complaints {% endblock title %}
 
 
 
@@ -30,5 +30,5 @@
     </table>
 {% endblock body%}
 {% block sec_body %}
-    <a href="{% url 'Management:AddComp' %}" style="position: relative;">Add a New Complaint</a>
+    <a href="{% url 'Management:Add_Complaint' %}" style="position: relative;">Add a New Complaint</a>
 {% endblock sec_body %}

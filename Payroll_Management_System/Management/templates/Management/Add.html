@@ -1,15 +1,15 @@
-{% extends "Management/Layout.html" %}
+{% extends "Management/layout.html" %}
 
 {% block title %} Add Favorites {% endblock title %}
 
 {% block body %}
     <h1>Add Favorites</h1>
-    <form action="{% url 'Management:AddFav' %}" method="POST">
+    <form action="{% url 'Management:Add_Favourite' %}" method="POST">
         {% csrf_token %}
         {{ form }}
         <input type="submit">
     </form>
     <div class="container">
-        <a href="{% url 'Management:Fav' %}">View Tasks</a>
+        <a href="{% url 'Management:View_Favourite' %}">View Tasks</a>
     </div>
 {% endblock %}

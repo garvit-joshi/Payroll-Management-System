@@ -1,4 +1,4 @@
-{% extends "Management/Layout.html" %}
+{% extends "Management/layout.html" %}
 
 {% block title %} Home Page {% endblock title %}
 
@@ -20,12 +20,12 @@
     <p>Employee Login Here</p>
     <div><span>Login</span><span>Employee</span></div>
 </a>
-<a href="{% url 'Management:AddComp' %}" class="repoCard" target="_blank" rel="noopener noreferrer">
+<a href="{% url 'Management:Add_Complaint' %}" class="repoCard" target="_blank" rel="noopener noreferrer">
    <div class="repoTitle">Report a complaint</div>
    <p>Bug Reports, Complaint Filing System</p>
    <div><span>Form</span><span>Bugs</span></div>
 </a>
-<a href="{% url 'Management:AddFav' %}" class="repoCard" rel="noopener noreferrer">
+<a href="{% url 'Management:Add_Favourite' %}" class="repoCard" rel="noopener noreferrer">
    <div class="repoTitle">Add A New Favorite</div>
    <p>Adding a new favorite</p>
    <div><span>Favorite</span><span>Add</span></div>

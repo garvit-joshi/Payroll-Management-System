@@ -1,6 +1,6 @@
-{% extends "Management/Layout.html" %}
+{% extends "Management/layout.html" %}
 
-{% block title %} Favorites {% endblock title %}
+{% block title %} View Favourite {% endblock title %}
 
 {% block body %}
 <h1>Favorites</h1>
@@ -11,5 +11,5 @@
             <p>No Such Favorites</p>
         {% endfor %}
     </ul>
-    <a href="{% url 'Management:AddFav' %}">Add a New Task</a>
+    <a href="{% url 'Management:Add_Favourite' %}">Add a New Favourite</a>
 {% endblock body %}
