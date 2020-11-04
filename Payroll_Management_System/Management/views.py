@@ -34,7 +34,7 @@ def index(request):
     })
 
 def view_fav(request):
-    return render(request, "Management/Fav.html", {
+    return render(request, "Management/favourite.html", {
         "favorites": favorites
     })
 
@@ -46,12 +46,12 @@ def add_fav(request):
             favorites.append(new_favorite)
             return HttpResponseRedirect(reverse("Management:Add_Favourite"))
         else:
-            return render(request, "Management/Add.html", {
+            return render(request, "Management/add_favourite.html", {
                 "form": form,
                 "favorites": favorites
             })
     
-    return render(request, "Management/Add.html", {
+    return render(request, "Management/add_favourite.html", {
         "form": NewFavForm(),
         "favorites": favorites
     })
