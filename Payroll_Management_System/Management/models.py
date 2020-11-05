@@ -7,3 +7,7 @@ class Employee(models.Model):
     Password = models.CharField(max_length=64)
     Position = models.CharField(max_length=64)
     Salary = models.IntegerField()
+
+
+    def __str__(self):
+        return f"{self.id}: {self.Name} is {self.Position} with salary of {self.Salary}. Email:{self.Email} and Password:{self.Password}"

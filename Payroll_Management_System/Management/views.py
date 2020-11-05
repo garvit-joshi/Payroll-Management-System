@@ -3,7 +3,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 import datetime
 from django import forms
 from django.urls import reverse
-import itertools
+from .models import Employee
 
 #Adding Favorite List
 favorites = []
