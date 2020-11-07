@@ -33,7 +33,7 @@ class NewSearchForm(forms.Form):
 def index(request):
     now = datetime.datetime.now()
     return render(request, "Management/index.html", {
-        "Favorites": favorites
+        "favorites": favorites
     })
 
 def view_fav(request):
@@ -76,16 +76,19 @@ def add_complaint(request):
             return HttpResponseRedirect(reverse("Management:Add_Complaint"))
         else:
             return render(request, "Management/add_complaint.html", {
-                "form": form
+                "form": form,
+                "favorites": favorites
             })
     
     return render(request, "Management/add_complaint.html", {
-        "form": NewComplaintForm()
+        "form": NewComplaintForm(),
+        "favorites": favorites
     })
 
 def view_complaint(request):
     return render(request, "Management/complaint.html", {
-        "Complaint": zip(complaint_author, complaint_email, complaint_type, complaint_subject, complaint_message)
+        "Complaint": zip(complaint_author, complaint_email, complaint_type, complaint_subject, complaint_message),
+        "favorites": favorites
     })
 
 def search(request):
@@ -98,17 +101,20 @@ def search(request):
             return render(request, "Management/search.html", {
                 "form": form,
                 "result": result,
-                "method": request.method
+                "method": request.method,
+                "favorites": favorites
             })
         else:
             return render(request, "Management/search.html", {
                 "result": result,
                 "form": form,
-                "method": request.method
+                "method": request.method,
+                "favorites": favorites
             })
     
     return render(request, "Management/Search.html", {
         "result": result,
         "form": NewSearchForm(),
-        "method": request.method
+        "method": request.method,
+        "favorites": favorites
     })
