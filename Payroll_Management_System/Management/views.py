@@ -112,7 +112,7 @@ def search(request):
                 "favorites": favorites
             })
     
-    return render(request, "Management/Search.html", {
+    return render(request, "Management/search.html", {
         "result": result,
         "form": NewSearchForm(),
         "method": request.method,
