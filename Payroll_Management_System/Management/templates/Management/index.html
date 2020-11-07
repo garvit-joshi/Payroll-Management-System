@@ -5,22 +5,23 @@
 
 
 {% block body %}
+<h1>Features:</h1>
 <a href="/admin/" class="repoCard" target="_blank" rel="noopener noreferrer">
    <div class="repoTitle">Login</div>
    <p>Login for Admins</p>
    <div><span>Login</span><span>Admin</span></div>
 </a>
-<a href="#" class="repoCard" target="_blank" rel="noopener noreferrer">
+<a href="#" class="repoCard" rel="noopener noreferrer">
     <div class="repoTitle">Signup for Employee</div>
     <p>Employee Register Here!!</p>
     <div><span>Login</span><span>Employee</span></div>
 </a>
-<a href="#" class="repoCard" target="_blank" rel="noopener noreferrer">
+<a href="#" class="repoCard" rel="noopener noreferrer">
     <div class="repoTitle">Login for Employee</div>
     <p>Employee Login Here</p>
     <div><span>Login</span><span>Employee</span></div>
 </a>
-<a href="{% url 'Management:Add_Complaint' %}" class="repoCard" target="_blank" rel="noopener noreferrer">
+<a href="{% url 'Management:Add_Complaint' %}" class="repoCard" rel="noopener noreferrer">
    <div class="repoTitle">Report a complaint</div>
    <p>Bug Reports, Complaint Filing System</p>
    <div><span>Form</span><span>Bugs</span></div>
@@ -29,5 +30,10 @@
    <div class="repoTitle">Add A New Favorite</div>
    <p>Adding a new favorite</p>
    <div><span>Favorite</span><span>Add</span></div>
+</a>
+<a href="{% url 'Management:Search' %}" class="repoCard" rel="noopener noreferrer">
+   <div class="repoTitle">Search an Employee</div>
+   <p>Seach Emplyee With there names</p>
+   <div><span>Search</span><span>Employee</span></div>
 </a>
 {% endblock body%}

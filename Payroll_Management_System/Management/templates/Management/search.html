@@ -1,0 +1,44 @@
+{% extends "Management/layout.html" %}
+
+{% block title %} Search {% endblock title %}
+
+
+
+{% block body %}
+{% if method == "GET" %}
+    <h1>Search an Employee</h1>
+{% else %}
+    <h1>Results</h1>
+{% endif %}
+<form action="{% url 'Management:Search' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+</form>
+</div>
+<div class="repoContainer">
+    {% if not result and method == "POST" %}
+        <p>No Result Found</p>
+    {% elif method == "GET" %}
+        <p></p>
+    {% else %}
+        <table id="code" style="position: relative; margin-right: 30px; padding: 15px;border-spacing:30px;">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Position</th>
+            </tr>
+            {% for r in result %}
+                <tr>
+                    <td>{{ r.id }}</td>
+                    <td>{{ r.Name }}</td>
+                    <td>{{ r.Email }}</td>
+                    <td>{{ r.Position }}</td>
+                </tr>
+            {% empty %}
+                <td colspan="5" style="text-align: center; color: aqua;">No Result</td>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock body%}

@@ -25,12 +25,15 @@ class NewComplaintForm(forms.Form):
     subject = forms.CharField(label="Subject:", min_length=10, required="True")
     message = forms.CharField(label="Message:", max_length=300, required="True")
 
+class NewSearchForm(forms.Form):
+    query = forms.CharField(label="Employee Name:", max_length=100, required="True")
+
 
 # Create your views here.
 def index(request):
     now = datetime.datetime.now()
     return render(request, "Management/index.html", {
-        "Favorites": favorites
+        "favorites": favorites
     })
 
 def view_fav(request):
@@ -74,13 +77,44 @@ def add_complaint(request):
         else:
             return render(request, "Management/add_complaint.html", {
                 "form": form,
+                "favorites": favorites
             })
     
     return render(request, "Management/add_complaint.html", {
-        "form": NewComplaintForm()
+        "form": NewComplaintForm(),
+        "favorites": favorites
     })
 
 def view_complaint(request):
     return render(request, "Management/complaint.html", {
-        "Complaint": zip(complaint_author, complaint_email, complaint_type, complaint_subject, complaint_message)
+        "Complaint": zip(complaint_author, complaint_email, complaint_type, complaint_subject, complaint_message),
+        "favorites": favorites
+    })
+
+def search(request):
+    result = "NONE"
+    if request.method == "POST":
+        form = NewSearchForm(request.POST)
+        if form.is_valid():
+            query = form.cleaned_data["query"]
+            result = Employee.objects.filter(Name=query)
+            return render(request, "Management/search.html", {
+                "form": form,
+                "result": result,
+                "method": request.method,
+                "favorites": favorites
+            })
+        else:
+            return render(request, "Management/search.html", {
+                "result": result,
+                "form": form,
+                "method": request.method,
+                "favorites": favorites
+            })
+    
+    return render(request, "Management/Search.html", {
+        "result": result,
+        "form": NewSearchForm(),
+        "method": request.method,
+        "favorites": favorites
     })
