@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
-import datetime
 from django import forms
 from django.urls import reverse
 from .models import Employee
@@ -31,7 +30,6 @@ class NewSearchForm(forms.Form):
 
 # Create your views here.
 def index(request):
-    now = datetime.datetime.now()
     return render(request, "Management/index.html", {
         "favorites": favorites
     })
