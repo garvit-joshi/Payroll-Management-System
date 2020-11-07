@@ -5,6 +5,7 @@
 
 
 {% block body %}
+<h1>Features:</h1>
 <a href="/admin/" class="repoCard" target="_blank" rel="noopener noreferrer">
    <div class="repoTitle">Login</div>
    <p>Login for Admins</p>
@@ -29,5 +30,10 @@
    <div class="repoTitle">Add A New Favorite</div>
    <p>Adding a new favorite</p>
    <div><span>Favorite</span><span>Add</span></div>
+</a>
+<a href="{% url 'Management:Search' %}" class="repoCard" rel="noopener noreferrer">
+   <div class="repoTitle">Search an Employee</div>
+   <p>Seach Emplyee With there names</p>
+   <div><span>Search</span><span>Employee</span></div>
 </a>
 {% endblock body%}

@@ -1,0 +1,23 @@
+{% extends "Management/layout.html" %}
+
+{% block title %} Search {% endblock title %}
+
+
+
+{% block body %}
+<h1>Search an Employee</h1>
+<form action="{% url 'Management:Search' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+</form>
+</div>
+<div class="repoContainer">
+    {% if not result and method == "POST" %}
+        <p>No Result Found</p>
+    {% elif method == "GET" %}
+        <p>GET REQUEST</p>
+    {% else %}
+        <p>POST REQUEST- Found</p>
+    {% endif %}
+{% endblock body%}
