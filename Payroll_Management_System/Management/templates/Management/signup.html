@@ -1,0 +1,15 @@
+{% extends "Management/layout.html" %}
+
+{% block title %} SignUp {% endblock title %}
+
+{% block body %}
+    <h1>Signup</h1>
+    <form action="{% url 'Management:Sign_Up' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+    <div class="container">
+        <a href="{% url 'Management:Home' %}">Home</a>
+    </div>
+{% endblock %}

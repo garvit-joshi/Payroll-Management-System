@@ -27,6 +27,13 @@ class NewComplaintForm(forms.Form):
 class NewSearchForm(forms.Form):
     query = forms.CharField(label="Employee Name:", max_length=100, required="True")
 
+class NewSignupForm(forms.Form):
+    Name = forms.CharField(label="Your Name:",max_length=64)
+    Email = forms.CharField(label="Your Email:",max_length=64)
+    Password = forms.CharField(label="Password",max_length=64)
+    Position = forms.CharField(label="Your Position",max_length=64)
+    Salary = forms.IntegerField(label="Your Salary:")
+
 
 # Create your views here.
 def index(request):
@@ -114,5 +121,28 @@ def search(request):
         "result": result,
         "form": NewSearchForm(),
         "method": request.method,
+        "favorites": favorites
+    })
+
+def sign_up(request):
+    if request.method == "POST":
+        form = NewSignupForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data["Name"]
+            email = form.cleaned_data["Email"]
+            password = form.cleaned_data["Password"]
+            position = form.cleaned_data["Position"]
+            salary = form.cleaned_data["Salary"]
+            new_employee = Employee(Name= name, Email= email, Password= password, Position= position, Salary= salary)
+            new_employee.save()
+            return HttpResponseRedirect(reverse("Management:Sign_Up"))
+        else:
+            return render(request, "Management/signup.html", {
+                "form": form,
+                "favorites": favorites
+            })
+    
+    return render(request, "Management/signup.html", {
+        "form": NewSignupForm(),
         "favorites": favorites
     })

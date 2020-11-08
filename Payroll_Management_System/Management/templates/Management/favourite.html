@@ -4,12 +4,14 @@
 
 {% block body %}
 <h1>Favorites</h1>
+<div class="skills">
     <ul>
         {% for fav in favorites %}
-            <li>{{ fav }}</li>
+            <span>{{ fav }}</span>
             {% empty %}
             <p>No Such Favorites</p>
         {% endfor %}
     </ul>
+</div>
     <a href="{% url 'Management:Add_Favourite' %}">Add a New Favourite</a>
 {% endblock body %}
