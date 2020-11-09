@@ -29,7 +29,7 @@ class NewSearchForm(forms.Form):
 
 class NewSignupForm(forms.Form):
     Name = forms.CharField(label="Your Name:",max_length=64)
-    Email = forms.CharField(label="Your Email:",max_length=64)
+    Email = forms.EmailField(label="Your Email:",max_length=64)
     Password = forms.CharField(label="Password",max_length=64)
     Position = forms.CharField(label="Your Position",max_length=64)
     Salary = forms.IntegerField(label="Your Salary:")
