@@ -28,6 +28,7 @@ Made with:
 ## Run App:
 
 <ol>
+    <li> Open command prompt and type:</li>
     <li> <code>cd .\Payroll_Management_System\ </code></li>
     <li> <code>python manage.py runserver</code></li>
     <li> Open a web browser</li>
