@@ -1,0 +1,32 @@
+#register-form {
+    width: 300px;
+    background-color: white;
+    padding: 24px;
+    margin: auto;
+}
+p {
+    margin: 0;
+    margin-bottom: 4px;
+    margin-top: 12px;
+}
+select {
+    margin-bottom: 20px;
+    width: 102%;
+}
+input,textarea {
+    width: 100%;
+}
+#terms {
+    width: 10%;
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
+#male {
+    width: 10%;
+}
+#female {
+    width: 10%;
+}
+#other {
+    width: 10%;
+}

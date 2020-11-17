@@ -1,0 +1,29 @@
+#header {
+    background-color: lightgreen;
+    padding: 16px;
+}
+#navbar {
+    background-color: lightcoral;
+    padding: 8px;
+}
+#main-sec {
+    background-color: indigo;
+    padding: 24px;
+
+}
+#section {
+    background-color:lightgreen;
+    padding: 16px;
+}
+.article {
+    background-color: lightpink;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+#footer {
+    background-color: khaki;
+    padding: 24px;
+}
