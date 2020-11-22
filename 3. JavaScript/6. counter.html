@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Count</title>
+        <script>
+            let counter = 0;
+            function count() {
+                counter++;
+
+                if (counter % 10 === 0) {
+                    alert(`Count is now ${counter}`);
+                }
+
+                document.querySelector('h1').innerHTML = counter;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>0</h1>
+        <button onclick="count()">Count</button>
+    </body>
+</html>
