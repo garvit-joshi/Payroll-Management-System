@@ -18,11 +18,11 @@ Made with:
 
 ## Tested on:
 <ul>
-    <li>Chrome 86.0(Windows)</li>
+    <li>Chrome 88.0(Windows)</li>
     <li>Microsoft Edge 86.0(Windows)</li>
-    <li>Firefox 82.0 (Manjaro)</li>
-    <li>Python 3.9.0(Windows)</li>
-    <li>Python 3.8.6(Manjaro)</li>
+    <li>Firefox 82.0 (Linux)</li>
+    <li>Python 3.9.1(Windows)</li>
+    <li>Python 3.9.1(Linux)</li>
 </ul>
 
 ## Run App:
