@@ -1,5 +1,9 @@
 # PAYROLL MANAGEMENT SYSTEM:
 
+
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/garvit-joshi/Payroll-Management-System)
+
+
 Made with:
 <ul>
     <li>HTML</li>
