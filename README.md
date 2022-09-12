@@ -1,9 +1,6 @@
 # PAYROLL MANAGEMENT SYSTEM:
 
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/garvit-joshi/Payroll-Management-System)
-
-
 Made with:
 <ul>
     <li>HTML</li>
@@ -22,11 +19,11 @@ Made with:
 
 ## Tested on:
 <ul>
-    <li>Chrome 88.0(Windows)</li>
+    <li>Chrome 105.0(Windows/Linux)</li>
     <li>Microsoft Edge 86.0(Windows)</li>
     <li>Firefox 82.0 (Linux)</li>
     <li>Python 3.9.1(Windows)</li>
-    <li>Python 3.9.1(Linux)</li>
+    <li>Python 3.10.5(Linux)</li>
 </ul>
 
 ## Run App:
@@ -36,6 +33,9 @@ Made with:
     <li> <code>cd .\Payroll_Management_System\ </code></li>
     <li> <code>python manage.py runserver</code></li>
     <li> Open a web browser</li>
-    <li> Type: <code>http://127.0.0.1:8000/Payroll/</code> and press <b>Enter</b></li>
+    <li> Type: <code>http://127.0.0.1:8000/Payroll/</code></li>
+    <li> For Admin Dashboard: <code>http://127.0.0.1:8000/admin/</code>
+    <li> Admin Username: <code>garvit_joshi</code> </li>
+    <li> Admin Passoword: <code>garvit@123</code> </li>
 </ol>
 
